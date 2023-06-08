@@ -33,6 +33,14 @@
                 </div>
               @enderror
             </div>
+            {{-- <div class="form-floating">
+              <input type="password" name="password" class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
+              <label for="password">Ulangi</label>
+              @error('password')
+                <div class="invalid-feedback"> {{ $message }}
+                </div>
+              @enderror
+            </div> --}}
         
             <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Daftar</button>
             <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> -->

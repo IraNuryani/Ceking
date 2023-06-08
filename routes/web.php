@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -16,8 +17,8 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('beranda', [
-        "title" => "Beranda"
+    return view('home', [
+        "title" => "Home"
     ]);
 });
 
@@ -27,11 +28,11 @@ Route::get('/artikel', function () {
     ]);
 });
 
-// Route::get('/makanan-sehat', function () {
-//     return view('rekomendasi makanan', [
-//         "title" => "Makanan Sehat"
-//     ]);
-// });
+Route::get('/makanan', function () {
+    return view('makanan', [
+        "title" => "Makanan Sehat"
+    ]);
+});
 
 Route::get('/anak', function () {
     return view('anak', [
@@ -39,18 +40,28 @@ Route::get('/anak', function () {
     ]);
 });
 
-// Route::get('/grafik-pertumbuhan', function () {
-//     return view('grafik pertumbuhan', [
-//         "title" => "grafik Pertumbuhan"
-//     ]);
-// });
+Route::get('/grafik', function () {
+    return view('grafik', [
+        "title" => "grafik Pertumbuhan"
+    ]);
+});
 
-// Route::get('/konsultasi', function () {
-//     return view('konsultasi', [
-//         "title" => "konsultasi"
-//     ]);
-// });
+Route::get('/konsultasi', function () {
+    return view('konsultasi', [
+        "title" => "konsultasi"
+    ]);
+});
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/beranda', function(){
+    return view('beranda.index', [
+        'title' => 'Beranda',
+        'active' => 'beranda'
+    ]);
+})->middleware('auth');
