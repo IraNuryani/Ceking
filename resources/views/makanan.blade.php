@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('container')
-  <h1 class="text-center">Data Anak</h1>
+  <h1 class="text-center">Rekomendasi Makanan Sehat</h1>
 @endsection

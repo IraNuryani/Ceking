@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <div class="container">
     <a class="navbar-brand" href="/">CeKing</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,18 +10,18 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         @guest
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="/">Home</a>
+          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="/"><i class="bi bi-house-door"></i> Home</a>
         </li>
         @endguest
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link {{ ($title === "Artikel" ) ? 'active' : '' }}" href="/artikel">Artikel</a>
-        </li>
+        </li> --}}
       </ul>
       <ul class="navbar-nav">
         {{-- Halaman yang tampil jika user sudah login --}}
         @auth
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda">Beranda</a>
+          <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda"><i class="bi bi-layout-text-window"></i> Beranda</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Anak" ) ? 'active' : '' }}" href="/anak">Anak</a>

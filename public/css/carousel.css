@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
+  padding-top: 0rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
@@ -47,9 +47,9 @@ body {
   font-weight: 400;
 }
 /* rtl:begin:ignore */
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+.marketing .col-lg-6 p {
+  margin-right: .0rem;
+  margin-left: .0rem;
 }
 /* rtl:end:ignore */
 

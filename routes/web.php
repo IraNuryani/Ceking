@@ -28,11 +28,11 @@ Route::get('/artikel', function () {
     ]);
 });
 
-// Route::get('/makanan-sehat', function () {
-//     return view('rekomendasi makanan', [
-//         "title" => "Makanan Sehat"
-//     ]);
-// });
+Route::get('/makanan', function () {
+    return view('makanan', [
+        "title" => "Makanan Sehat"
+    ]);
+});
 
 Route::get('/anak', function () {
     return view('anak', [
@@ -40,17 +40,17 @@ Route::get('/anak', function () {
     ]);
 });
 
-// Route::get('/grafik-pertumbuhan', function () {
-//     return view('grafik pertumbuhan', [
-//         "title" => "grafik Pertumbuhan"
-//     ]);
-// });
+Route::get('/grafik', function () {
+    return view('grafik', [
+        "title" => "grafik Pertumbuhan"
+    ]);
+});
 
-// Route::get('/konsultasi', function () {
-//     return view('konsultasi', [
-//         "title" => "konsultasi"
-//     ]);
-// });
+Route::get('/konsultasi', function () {
+    return view('konsultasi', [
+        "title" => "konsultasi"
+    ]);
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

@@ -20,59 +20,9 @@
   </head>
   <body>
     
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="/">CeKing</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              @guest
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/">Home</a>
-              </li>
-              @endguest
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Artikel" ) ? 'active' : '' }}" href="/artikel">Artikel</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav">
-              {{-- Halaman yang tampil jika user sudah login --}}
-              @auth
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda">Beranda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Anak" ) ? 'active' : '' }}" href="/anak">Anak</a>
-              </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Selamat Datang, {{ auth()->user()->name }}
-                  </a>
-                  <ul class="dropdown-menu">
-                    {{-- <li><a class="dropdown-item" href="/beranda"><i class="bi bi-layout-text-window"></i> Beranda</a></li>
-                    <li><hr class="dropdown-divider"></li> --}}
-                    <li>
-                      <form action="/logout" method="post">
-                        @csrf
-                        <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
-                      </form>
-                    </li>
-                  </ul>
-                </li>
-                @else 
-                  <li class="nav-item">
-                    <a href="/login" class="nav-link {{ ($title === "login" ) ? 'active' : '' }}"><i class="bi bi-people"></i> Masuk</a>
-                  </li>
-                @endauth
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-</header>
+@extends('layouts.main')
+    
+@section('container')
 
 <main>
 
@@ -93,33 +43,41 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <div class="col-md-6">
+        <div class="col-lg-4">
+        {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
 
-        <h2><a href="/grafik-pertumbuhan">Grafik Pertumbuhan</a> </h2>
+        <h2><a href="/grafik"><i class="bi bi-bar-chart-fill"></i> Grafik Pertumbuhan</a> </h2>
         <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
       </div><!-- /.col-lg-4 -->
+    </div>
+    <div class="col-md-6">
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-        <h2>Heading</h2>
+        <h2><a href="/konsultasi">Konsultasi</a></h2>
         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
 
       </div><!-- /.col-lg-4 -->
+    </div>
+    <div class="col-md-6">
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-        <h2>Heading</h2>
+        <h2><a href="/artikel">Artikel</a></h2>
         <p>And lastly this, the third column of representative placeholder content.</p>
 
       </div><!-- /.col-lg-4 -->
+    </div>
+      <div class="col-md-6">
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-        <h2>Heading</h2>
+        <h2><a href="/makanan">Rekomendasi Makanan Sehat</a></h2>
         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
 
       </div><!-- /.col-lg-4 -->
+      </div>
     </div><!-- /.row -->
 
 
@@ -177,7 +135,7 @@
     <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer> --}}
 </main>
-
+@endsection
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
