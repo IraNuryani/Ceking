@@ -19,3 +19,16 @@
     border-radius : 0;
     margin-bottom: -1px;
   }
+
+  .article-container {
+    background-color: #FFFFFF; /* Warna latar belakang kotak */
+    padding: 15px; /* Ruang di dalam kotak */
+    border-radius: 5px; /* Membuat sudut kotak melengkung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan pada kotak */
+    max-width: 800px; /* Lebar maksimal kotak */
+    margin: 0 auto;
+  }
+  
+  .article-content {
+    margin: 0 -40px;
+  }

@@ -16,7 +16,7 @@
     @if ($artikels->count())
       
     @foreach ($artikels as $artikel )
-    <div class="card mb-3" style="max-width: 800px;">
+    <div class="card mb-1" style="max-width: 900px;">
         <div class="row justify-content-center g-1">
           <div class="col-md-6">
             <img src="https://source.unsplash.com/photos/random?" class="img-fluid rounded-start" alt="...">
@@ -25,9 +25,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $artikel->title }}</h5>
                 <small class="text-muted">
-                  By: <a href="/user/{{ $artikel->user->username }}" class="text-decoration-none">{{ $artikel->user->name }}</a> {{ $artikel->created_at->diffForHumans() }}
+                  <a href="/user/{{ $artikel->user->username }}" class="text-decoration-none"><i class="bi bi-person"> {{ $artikel->user->name }}</i></a> <i class="bi bi-clock"> {{ $artikel->created_at->diffForHumans() }}</i>
                   </small>
-                <p class="card-text">{{ $artikel->excerpt }}</p><a href="/artikels/{{ $artikel->slug }}"class="btn btn-primary">Read more</a>
+                <p style="font-family: Cambria, serif;" class="card-text">{{ $artikel->excerpt }}</p><a href="/artikels/{{ $artikel->slug }}"class="btn btn-info">Baca Selengkapnya >></a>
               
               </div>
           </div>

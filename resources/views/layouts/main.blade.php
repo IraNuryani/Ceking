@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #b4deef, #a0cffe);
+      }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CeKing | {{ $title }}</title>
