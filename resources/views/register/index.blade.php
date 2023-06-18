@@ -10,7 +10,16 @@
             @csrf
             <div class="form-floating">
               <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="name" required value="{{ old('name') }}">
-              <label for="name">Nama Pengguna</label>
+              <label for="name">Nama Lengkap</label>
+              @error('name')
+                <div class="invalid-feedback"> {{ $message }}
+                </div>
+              @enderror
+            
+            </div>
+            <div class="form-floating">
+              <input type="text" name="username" class="form-control rounded-top @error('username') is-invalid @enderror" id="username" placeholder="name" required value="{{ old('username') }}">
+              <label for="username">Nama Pengguna</label>
               @error('name')
                 <div class="invalid-feedback"> {{ $message }}
                 </div>

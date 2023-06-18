@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   <div class="container">
     <a class="navbar-brand" href="/">CeKing</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,13 @@
       <ul class="navbar-nav">
         {{-- Halaman yang tampil jika user sudah login --}}
         @auth
+        {{-- <li>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </li> --}}
+        
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda"><i class="bi bi-layout-text-window"></i> Beranda</a>
         </li>

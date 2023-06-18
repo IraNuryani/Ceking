@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
 
@@ -18,15 +19,16 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "active" => "home"
     ]);
 });
 
-Route::get('/artikel', function () {
-    return view('artikel', [
-        "title" => "Artikel"
-    ]);
-});
+// Route::get('/artikel', function () {
+//     return view('artikel', [
+//         "title" => "Artikel"
+//     ]);
+// });
 
 Route::get('/makanan', function () {
     return view('makanan', [
@@ -52,6 +54,11 @@ Route::get('/konsultasi', function () {
     ]);
 });
 
+Route::get('/artikels', [ArtikelController::class, 'index']);
+Route::get('artikels/{artikel:slug}', [ArtikelController::class, 'show']);
+
+
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -65,3 +72,6 @@ Route::get('/beranda', function(){
         'active' => 'beranda'
     ]);
 })->middleware('auth');
+
+Route::resource('/beranda/anak', BerandaController::class)
+->middleware('auth');
