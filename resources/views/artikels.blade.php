@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <h1 class="mb-3 text-center">Konten Artikel</h1>
+    <h1 class="mb-3 text-center" style="font-family: 'Times New Roman', Times, serif;">Konten Artikel</h1>
     <div class="row justify-content-center mb-3">
       <div class="col-md-6">
         <form action="/artikels">
@@ -16,14 +16,14 @@
     @if ($artikels->count())
       
     @foreach ($artikels as $artikel )
-    <div class="card mb-1" style="max-width: 900px;">
+    <div class="card mb-2" style="max-width: 900px;">
         <div class="row justify-content-center g-1">
           <div class="col-md-6">
             <img src="https://source.unsplash.com/photos/random?" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-6">
             <div class="card-body">
-                <h5 class="card-title">{{ $artikel->title }}</h5>
+                <h5 class="card-title" style="font-family: 'Times New Roman', Times, serif;">{{ $artikel->title }}</h5>
                 <small class="text-muted">
                   <a href="/user/{{ $artikel->user->username }}" class="text-decoration-none"><i class="bi bi-person"> {{ $artikel->user->name }}</i></a> <i class="bi bi-clock"> {{ $artikel->created_at->diffForHumans() }}</i>
                   </small>

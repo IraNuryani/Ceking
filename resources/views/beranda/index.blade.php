@@ -44,19 +44,19 @@
     <div class="container">
       <div class="row ">
           <div class="col-md-4 mb-5">
-              <h2><a href="/grafik" class="text-decoration-none text-dark" style="font-weight: bold"> <i class="bi bi-bar-chart-fill"></i> Grafik Pertumbuhan</a> </h2>
+              <h2><a href="/grafik" class="text-decoration-none text-dark" style="font-family: 'Times New Roman', Times, serif; font-weight: bold"> <i class="bi bi-bar-chart-fill"></i> Grafik Pertumbuhan</a> </h2>
               <p style="font-family: Cambria, serif;">Grafik pertumbuhan akan merekam pertumbuhan si kecil setiap bulannya.</p>
           </div>
           <div class="col-md-4 mb-3">
-            <h2><a href="/konsultasi" class="text-decoration-none text-dark" style="font-weight: bold"> Konsultasi</a> </h2>
+            <h2><a href="/konsultasi" class="text-decoration-none text-dark" style="font-family: 'Times New Roman', Times, serif; font-weight: bold"> Konsultasi</a> </h2>
             <p style="font-family: Cambria, serif;">Chat dengan dokter atau tenaga ahli terkait pertumbuhan si kecil.</p>
            </div>
            <div class="col-md-4 mb-3">
-          <h2><a href="/artikels" class="text-decoration-none text-dark" style="font-weight: bold"> Artikel</a> </h2>
+          <h2><a href="/artikels" class="text-decoration-none text-dark" style="font-family: 'Times New Roman', Times, serif; font-weight: bold"> Artikel</a> </h2>
           <p style="font-family: Cambria, serif;">Artikel seputar pertumbuhan dan perkembangan si kecil yang dapat menambah pengetahuan bunda.</p>
          </div>
          <div class="col-md-4 mb-3">       
-          <h2><a href="/makanan" class="text-decoration-none text-dark" style="font-weight: bold"> Rekomendasi Makanan</a> </h2>
+          <h2><a href="/makanan" class="text-decoration-none text-dark" style="font-family: 'Times New Roman', Times, serif; font-weight: bold"> Rekomendasi Makanan</a> </h2>
           <p style="font-family: Cambria, serif;">Rekomendasi makanan sehat dan bergizi untuk si kecil agar memiliki nutrisi yang cukup.</p>
          </div>
     </div>

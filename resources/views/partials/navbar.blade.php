@@ -1,8 +1,8 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #77b3cd;">
   <div class="container">
-    <a class="navbar-brand" href="/">CeKing</a>
+    <a class="navbar-brand" href="/" style="font-family: Cambria, serif;">CeKing</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         @guest
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="/"><i class="bi bi-house-door"></i> Home</a>
+          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="/" style="font-family: Cambria, serif;"><i class="bi bi-house-door"></i> Home</a>
         </li>
         @endguest
         {{-- <li class="nav-item">
@@ -28,10 +28,10 @@
         </li> --}}
         
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda"><i class="bi bi-layout-text-window"></i> Beranda</a>
+          <a class="nav-link {{ ($title === "Beranda" ) ? 'active' : '' }}" href="/beranda" style="font-family: Cambria, serif;"><i class="bi bi-layout-text-window"></i> Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Anak" ) ? 'active' : '' }}" href="/anak">Anak</a>
+          <a class="nav-link {{ ($title === "Anak" ) ? 'active' : '' }}" href="/anak" style="font-family: Cambria, serif;">Anak</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +50,7 @@
           </li>
           @else 
             <li class="nav-item">
-              <a href="/login" class="nav-link {{ ($title === "login" ) ? 'active' : '' }}"><i class="bi bi-people"></i> Masuk</a>
+              <a href="/login" class="nav-link {{ ($title === "login" ) ? 'active' : '' }}" style="font-family: Cambria, serif;"><i class="bi bi-people"></i> Masuk</a>
             </li>
           @endauth
       </ul>
