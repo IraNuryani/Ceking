@@ -27,7 +27,7 @@
                 <small class="text-muted">
                   <a href="/user/{{ $artikel->user->username }}" class="text-decoration-none"><i class="bi bi-person"> {{ $artikel->user->name }}</i></a> <i class="bi bi-clock"> {{ $artikel->created_at->diffForHumans() }}</i>
                   </small>
-                <p style="font-family: Cambria, serif;" class="card-text">{{ $artikel->excerpt }}</p><a href="/artikels/{{ $artikel->slug }}"class="btn btn-info">Baca Selengkapnya >></a>
+                <p style="font-family: Cambria, serif;" class="card-text">{{ $artikel->excerpt }}</p><a href="/artikels/{{ $artikel->slug }}"class="btn btn-info" style="font-family: 'Berlin Sans FB', sans-serif;">Baca Selengkapnya >></a>
               
               </div>
           </div>
